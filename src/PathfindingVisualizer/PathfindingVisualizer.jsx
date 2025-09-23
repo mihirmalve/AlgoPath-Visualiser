@@ -12,8 +12,6 @@ import { RecursiveDivision } from "../mazes/recursiveDiv";
 import { basicRandom } from "../mazes/basicRandom";
 import { simpleStair } from "../mazes/simpleStair";
 import { basicWeight } from "../mazes/basicWeight";
-// import { Alert } from "bootstrap";
-// import { dijkstraOld } from "../algorithms/dijkstraOld";
 
 let StartNodeRow = 8;
 let StartNodeCol = 10;
@@ -93,7 +91,6 @@ export default class PathfindingVisualizer extends Component {
     return;
   };
 
- 
   handleMouseDown(row, col) {
     //If algo is running no mouse event will be entertained
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
@@ -332,7 +329,7 @@ export default class PathfindingVisualizer extends Component {
       this.addingStations = false;
     }
   }
-  
+
   selectAnAlgorithm = (algo) => {
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
       return;
@@ -363,7 +360,6 @@ export default class PathfindingVisualizer extends Component {
     }
     buttonElement.innerHTML = `Visualise ${algoName}`;
   };
-
 
   mazeGenerate = (mazeAlgo) => {
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
@@ -450,7 +446,6 @@ export default class PathfindingVisualizer extends Component {
       document.getElementById("weight-button").style.color = "#216cf8";
   };
 
- 
   addStation = () => {
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
       return;
@@ -525,7 +520,6 @@ export default class PathfindingVisualizer extends Component {
     }
   };
 
-  
   animateAlgorithm(
     visitedNodesInOrder,
     nodesInShortestPathOrder,
@@ -577,7 +571,6 @@ export default class PathfindingVisualizer extends Component {
     }
   }
 
-
   animateShortestPath(nodesInShortestPathOrder) {
     for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
       setTimeout(() => {
@@ -623,7 +616,6 @@ export default class PathfindingVisualizer extends Component {
       }, 30 * i * speed_selected);
     }
   }
-
 
   visulalizeAlgorithm = () => {
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
@@ -799,7 +791,6 @@ export default class PathfindingVisualizer extends Component {
     );
   };
 
- 
   clearBoard = () => {
     document.getElementById("distance").innerHTML = 0;
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
@@ -858,7 +849,6 @@ export default class PathfindingVisualizer extends Component {
     this.removePrevForNextAlgo();
   };
 
-  
   changeDirection = (directionCount) => {
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
       return;
@@ -873,7 +863,6 @@ export default class PathfindingVisualizer extends Component {
     allowedDirections = directionCount;
   };
 
- 
   selectSpeedOfVisualization = (speed) => {
     if (isAlgoRunning >= 1 || isGeneratingGrid === 1) {
       return;
@@ -892,7 +881,6 @@ export default class PathfindingVisualizer extends Component {
     }
     speed_selected = speed;
   };
-
 
   toggleTheme = () => {
     if (theme === 1) {
@@ -938,7 +926,6 @@ export default class PathfindingVisualizer extends Component {
     }
   };
 
-  
   render() {
     return (
       <div id="path_find" className="">
