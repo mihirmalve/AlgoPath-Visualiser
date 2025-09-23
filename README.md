@@ -20,8 +20,6 @@ AlgoGraphix is a visual, interactive web application for exploring various graph
 You can view the live version here:
 [AlgoPath-Visualiser](https://algo-graphix.netlify.app/)
 
-[GitHub](https://github.com/RaviTeja1804/AlgoPath-Visualiser)
-
 ---
 
 ## Features
